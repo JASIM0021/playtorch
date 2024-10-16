@@ -128,9 +128,9 @@ dependencies {
       extractJNI(files(rnAAR))
   } else {
       // React Native 0.69
-      def rnAarMatcher = "**/react-native/**/*${buildType}.aar"
-      def rnAAR = fileTree("${nodeModules}/react-native/android").matching({ it.include rnAarMatcher }).singleFile
-      extractJNI(files(rnAAR))
+      // def rnAarMatcher = "**/react-native/**/*${buildType}.aar"
+      // def rnAAR = fileTree("${nodeModules}/react-native/android").matching({ it.include rnAarMatcher }).singleFile
+      // extractJNI(files(rnAAR))
   }
 
   extractForNativeBuild("org.pytorch:pytorch_android_lite:${pytorchLiteVersion}")
